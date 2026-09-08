@@ -33,7 +33,7 @@ export default function Hero() {
           <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <LinkedinIcon />
           </a>
-          <a href="mailto:hello@hassanarslan.dev" aria-label="Email">
+          <a href="mailto:webwithhassan@gmail.com" aria-label="Email">
             <MailIcon />
           </a>
         </div>
