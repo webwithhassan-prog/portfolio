@@ -1,5 +1,5 @@
 import { ExternalLinkIcon } from './icons';
-import './Projects.css';
+import { eyebrow, sectionHeading, sectionSub, card } from './classNames';
 
 const projects = [
   {
@@ -22,33 +22,38 @@ const projects = [
 
 export default function Projects() {
   return (
-    <section id="projects">
-      <div className="container">
-        <p className="eyebrow">Projects</p>
-        <h2 className="section-heading">Things I've built</h2>
-        <p className="section-sub">
+    <section id="projects" className="py-24 sm:py-28">
+      <div className="container-narrow">
+        <p className={eyebrow}>Projects</p>
+        <h2 className={sectionHeading}>Things I've built</h2>
+        <p className={sectionSub}>
           Live, production websites I designed and developed end to end —
           from database to deployment.
         </p>
 
-        <div className="projects-grid">
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
           {projects.map((p) => (
             <a
               key={p.name}
               href={p.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="project-card"
+              className={`${card} block p-7 hover:-translate-y-1 hover:shadow-[0_10px_30px_-10px_rgb(0_0_0_/_0.4)]`}
             >
-              <div className="project-card-head">
-                <h3>{p.name}</h3>
-                <ExternalLinkIcon className="project-link-icon" />
+              <div className="mb-1 flex items-center justify-between">
+                <h3 className="font-serif text-xl font-bold text-text-h">{p.name}</h3>
+                <ExternalLinkIcon className="text-text-dim" />
               </div>
-              <p className="project-domain">{p.domain}</p>
-              <p className="project-desc">{p.description}</p>
-              <ul className="project-tags">
+              <p className="mb-4 font-mono text-[13px] text-accent">{p.domain}</p>
+              <p className="mb-5 text-[14.5px] leading-[1.7] text-text-dim">{p.description}</p>
+              <ul className="flex flex-wrap gap-2">
                 {p.tags.map((t) => (
-                  <li key={t}>{t}</li>
+                  <li
+                    key={t}
+                    className="rounded-md border border-border bg-bg-alt px-2.5 py-[5px] text-xs font-semibold text-text"
+                  >
+                    {t}
+                  </li>
                 ))}
               </ul>
             </a>

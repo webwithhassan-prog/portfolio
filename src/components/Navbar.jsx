@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import './Navbar.css';
+import { btnPrimary } from './classNames';
 
 const links = [
   { href: '#about', label: 'About' },
@@ -19,43 +19,62 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className={`navbar ${scrolled ? 'navbar-scrolled' : ''}`}>
-      <div className="navbar-inner">
-        <a href="#top" className="navbar-brand">
-          Hassan<span>.</span>
+    <header
+      className={`sticky top-0 z-50 border-b transition-colors duration-200 ${
+        scrolled ? 'border-border bg-bg/85 backdrop-blur-md' : 'border-transparent'
+      }`}
+    >
+      <div className="mx-auto flex max-w-[1080px] items-center gap-6 px-6 py-[18px]">
+        <a href="#top" className="font-serif text-xl font-bold tracking-tight text-text-h">
+          Hassan<span className="text-accent">.</span>
         </a>
 
-        <nav className="navbar-links">
+        <nav className="hidden flex-1 justify-center gap-8 md:flex">
           {links.map((link) => (
-            <a key={link.href} href={link.href}>
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-sm font-medium text-text-dim transition-colors hover:text-text-h"
+            >
               {link.label}
             </a>
           ))}
         </nav>
 
-        <a href="#contact" className="btn btn-primary navbar-cta">
-          Let's Talk
-        </a>
+        <div className="ml-auto hidden md:block">
+          <a href="#contact" className={`${btnPrimary} !px-[18px] !py-[9px] !text-sm`}>
+            Let's Talk
+          </a>
+        </div>
 
         <button
-          className="navbar-toggle"
+          className="ml-auto flex flex-col gap-[5px] p-2 md:hidden"
           aria-label="Toggle menu"
           onClick={() => setOpen((o) => !o)}
         >
-          <span />
-          <span />
-          <span />
+          <span className="block h-0.5 w-5 bg-text-h" />
+          <span className="block h-0.5 w-5 bg-text-h" />
+          <span className="block h-0.5 w-5 bg-text-h" />
         </button>
       </div>
 
       {open && (
-        <nav className="navbar-mobile">
+        <nav className="flex flex-col gap-1 border-t border-border px-6 pb-5 pt-2 md:hidden">
           {links.map((link) => (
-            <a key={link.href} href={link.href} onClick={() => setOpen(false)}>
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setOpen(false)}
+              className="border-b border-border py-3 text-[15px] text-text"
+            >
               {link.label}
             </a>
           ))}
-          <a href="#contact" onClick={() => setOpen(false)} className="btn btn-primary">
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className={`${btnPrimary} mt-3 justify-center`}
+          >
             Let's Talk
           </a>
         </nav>

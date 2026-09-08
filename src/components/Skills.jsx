@@ -1,4 +1,4 @@
-import './Skills.css';
+import { eyebrow, sectionHeading, sectionSub, card } from './classNames';
 
 const skillGroups = [
   {
@@ -25,22 +25,27 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills">
-      <div className="container">
-        <p className="eyebrow">Skills</p>
-        <h2 className="section-heading">Technologies I work with</h2>
-        <p className="section-sub">
+    <section id="skills" className="py-24 sm:py-28">
+      <div className="container-narrow">
+        <p className={eyebrow}>Skills</p>
+        <h2 className={sectionHeading}>Technologies I work with</h2>
+        <p className={sectionSub}>
           A snapshot of the stack I use to design, build and ship full stack
           web applications.
         </p>
 
-        <div className="skills-grid">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {skillGroups.map((group) => (
-            <div key={group.title} className="skill-card">
-              <h3 className="skill-card-title">{group.title}</h3>
-              <ul className="skill-tags">
+            <div key={group.title} className={`${card} p-6 hover:-translate-y-1`}>
+              <h3 className="mb-4 font-sans text-base font-semibold text-text-h">
+                {group.title}
+              </h3>
+              <ul className="flex flex-wrap gap-2">
                 {group.skills.map((s) => (
-                  <li key={s} className="skill-tag">
+                  <li
+                    key={s}
+                    className="rounded-full bg-accent-soft px-3 py-1.5 text-[13px] font-medium text-accent"
+                  >
                     {s}
                   </li>
                 ))}
