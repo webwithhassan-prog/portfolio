@@ -1,17 +1,18 @@
 :root {
-  --bg: #0b0c10;
-  --bg-alt: #121319;
-  --surface: #16181f;
-  --border: #262834;
-  --text: #c4c7d0;
-  --text-h: #f5f6f8;
-  --text-dim: #7d818f;
-  --accent: #7c5cff;
-  --accent-2: #22d3ee;
-  --accent-bg: rgba(124, 92, 255, 0.12);
+  --bg: #0a0e1a;
+  --bg-alt: #0e1424;
+  --surface: #121a2c;
+  --border: #232d44;
+  --text: #a7b0c2;
+  --text-h: #eef1f7;
+  --text-dim: #626c85;
+  --accent: #5578c9;
+  --accent-hover: #4568b8;
+  --accent-bg: rgba(85, 120, 201, 0.12);
   --shadow: rgba(0, 0, 0, 0.4) 0 10px 30px -10px;
 
   --sans: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+  --serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
   --mono: ui-monospace, 'SFMono-Regular', Consolas, monospace;
 
   font: 16px/1.6 var(--sans);
@@ -34,10 +35,11 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: var(--sans);
+  font-family: var(--serif);
+  font-weight: 700;
   color: var(--text-h);
   margin: 0;
-  line-height: 1.15;
+  line-height: 1.2;
 }
 
 p {
@@ -79,6 +81,7 @@ section {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  font-family: var(--sans);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -97,7 +100,7 @@ section {
 
 .section-heading {
   font-size: clamp(28px, 4vw, 38px);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   margin-bottom: 12px;
 }
 
@@ -113,7 +116,8 @@ section {
   align-items: center;
   gap: 8px;
   padding: 12px 22px;
-  border-radius: 8px;
+  border-radius: 6px;
+  font-family: var(--sans);
   font-size: 15px;
   font-weight: 600;
   border: 1px solid transparent;
@@ -131,7 +135,7 @@ section {
 }
 
 .btn-primary:hover {
-  background: #6a4ce0;
+  background: var(--accent-hover);
 }
 
 .btn-outline {

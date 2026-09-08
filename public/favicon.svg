@@ -1,11 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
-  <defs>
-    <linearGradient id="g" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
-      <stop offset="0" stop-color="#7c5cff"/>
-      <stop offset="1" stop-color="#22d3ee"/>
-    </linearGradient>
-  </defs>
-  <rect width="48" height="48" rx="12" fill="#0b0c10"/>
-  <text x="13" y="33" font-family="Arial, sans-serif" font-size="24" font-weight="800" fill="#f5f6f8">H</text>
-  <circle cx="35" cy="30" r="4" fill="url(#g)"/>
+  <rect width="48" height="48" rx="12" fill="#0a0e1a"/>
+  <text x="13" y="33" font-family="Georgia, 'Times New Roman', serif" font-size="24" font-weight="700" fill="#eef1f7">H</text>
+  <circle cx="35" cy="30" r="4" fill="#5578c9"/>
 </svg>

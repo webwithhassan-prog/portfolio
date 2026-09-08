@@ -13,7 +13,7 @@
   transform: translateX(-50%);
   width: 900px;
   height: 500px;
-  background: radial-gradient(circle, rgba(124, 92, 255, 0.25) 0%, rgba(124, 92, 255, 0) 70%);
+  background: radial-gradient(circle, rgba(85, 120, 201, 0.22) 0%, rgba(85, 120, 201, 0) 70%);
   pointer-events: none;
   z-index: -1;
 }
@@ -29,10 +29,7 @@
 }
 
 .accent-text {
-  background: linear-gradient(90deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: var(--accent);
 }
 
 .hero-sub {
@@ -61,7 +58,7 @@
 }
 
 .hero-resume-link:hover {
-  color: var(--accent-2);
+  color: var(--accent);
 }
 
 .hero-socials {
