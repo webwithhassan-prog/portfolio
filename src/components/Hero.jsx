@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, MailIcon, ArrowRightIcon, DownloadIcon } from './icons';
+import { LinkedinIcon, MailIcon, ArrowRightIcon, DownloadIcon } from './icons';
 import './Hero.css';
 
 export default function Hero() {
@@ -30,9 +30,6 @@ export default function Hero() {
         </div>
 
         <div className="hero-socials">
-          <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-            <GithubIcon />
-          </a>
           <a href="https://www.linkedin.com/in/hassan-web-505220435/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <LinkedinIcon />
           </a>

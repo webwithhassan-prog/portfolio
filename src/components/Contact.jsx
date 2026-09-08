@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MailIcon, GithubIcon, LinkedinIcon, MapPinIcon } from './icons';
+import { MailIcon, LinkedinIcon, MapPinIcon } from './icons';
 import './Contact.css';
 
 const CONTACT_EMAIL = 'webwithhassan@gmail.com';
@@ -37,13 +37,6 @@ export default function Contact() {
               <div>
                 <span className="contact-item-label">Email</span>
                 <span className="contact-item-value">{CONTACT_EMAIL}</span>
-              </div>
-            </a>
-            <a className="contact-item" href="https://github.com/" target="_blank" rel="noopener noreferrer">
-              <GithubIcon />
-              <div>
-                <span className="contact-item-label">GitHub</span>
-                <span className="contact-item-value">github.com/your-username</span>
               </div>
             </a>
             <a className="contact-item" href="https://www.linkedin.com/in/hassan-web-505220435/" target="_blank" rel="noopener noreferrer">
