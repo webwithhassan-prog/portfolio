@@ -1,0 +1,51 @@
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.about-text {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--text);
+}
+
+.about-text strong {
+  color: var(--text-h);
+}
+
+.about-facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.about-fact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.about-fact-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+}
+
+.about-fact-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+
+@media (max-width: 780px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
