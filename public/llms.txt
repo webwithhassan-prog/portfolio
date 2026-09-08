@@ -1,6 +1,6 @@
-# Hassan Ansari — Full Stack Developer Portfolio
+# Hassan Arslan — Full Stack Developer Portfolio
 
-> Portfolio site for Hassan Ansari, a full stack developer based in Lahore, Pakistan, currently completing a BSCS degree. Builds production web applications using the MERN stack (MongoDB, Express, React, Node.js) and PHP.
+> Portfolio site for Hassan Arslan, a full stack developer based in Lahore, Pakistan, currently completing a BSCS degree. Builds production web applications using the MERN stack (MongoDB, Express, React, Node.js) and PHP.
 
 ## Pages
 

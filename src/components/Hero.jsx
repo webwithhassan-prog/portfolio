@@ -14,7 +14,7 @@ export default function Hero() {
         <p className={eyebrow}>Available for freelance &amp; internships</p>
 
         <h1 className="mb-6 text-[38px] leading-[1.15] tracking-tight sm:text-[50px] lg:text-[62px]">
-          Hi, I'm <span className="text-accent">Hassan Ansari</span>
+          Hi, I'm <span className="text-accent">Hassan Arslan</span>
           <br />
           Full Stack Developer
         </h1>
@@ -33,7 +33,7 @@ export default function Hero() {
             Get In Touch
           </a>
           <a
-            href="/Hassan_Ansari_Resume.pdf"
+            href="/Hassan_Arslan_Resume.pdf"
             download
             className="inline-flex shrink-0 items-center gap-2 whitespace-nowrap px-1.5 py-3 text-[15px] font-semibold text-text-dim transition-colors hover:text-accent"
           >
