@@ -38,6 +38,14 @@ export function ArrowRightIcon(props) {
   );
 }
 
+export function DownloadIcon(props) {
+  return (
+    <svg className="icon" viewBox="0 0 24 24" {...props}>
+      <path d="M11 3h2v10.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17V3ZM5 19h14v2H5v-2Z" />
+    </svg>
+  );
+}
+
 export function PhoneIcon(props) {
   return (
     <svg className="icon" viewBox="0 0 24 24" {...props}>

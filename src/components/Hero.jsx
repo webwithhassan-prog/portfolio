@@ -1,4 +1,4 @@
-import { GithubIcon, LinkedinIcon, MailIcon, ArrowRightIcon } from './icons';
+import { GithubIcon, LinkedinIcon, MailIcon, ArrowRightIcon, DownloadIcon } from './icons';
 import './Hero.css';
 
 export default function Hero() {
@@ -23,6 +23,9 @@ export default function Hero() {
           </a>
           <a href="#contact" className="btn btn-outline">
             Get In Touch
+          </a>
+          <a href="/Hassan_Ansari_Resume.pdf" download className="hero-resume-link">
+            <DownloadIcon /> Download Resume
           </a>
         </div>
 

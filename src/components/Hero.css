@@ -49,6 +49,21 @@
   margin-bottom: 48px;
 }
 
+.hero-resume-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 6px;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-dim);
+  transition: color 0.15s ease;
+}
+
+.hero-resume-link:hover {
+  color: var(--accent-2);
+}
+
 .hero-socials {
   display: flex;
   gap: 20px;
