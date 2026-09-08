@@ -30,7 +30,7 @@ export default function Hero() {
           <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
             <GithubIcon />
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/hassan-web-505220435/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
             <LinkedinIcon />
           </a>
           <a href="mailto:webwithhassan@gmail.com" aria-label="Email">

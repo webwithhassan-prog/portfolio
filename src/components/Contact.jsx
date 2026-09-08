@@ -46,11 +46,11 @@ export default function Contact() {
                 <span className="contact-item-value">github.com/your-username</span>
               </div>
             </a>
-            <a className="contact-item" href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <a className="contact-item" href="https://www.linkedin.com/in/hassan-web-505220435/" target="_blank" rel="noopener noreferrer">
               <LinkedinIcon />
               <div>
                 <span className="contact-item-label">LinkedIn</span>
-                <span className="contact-item-value">linkedin.com/in/your-profile</span>
+                <span className="contact-item-value">linkedin.com/in/hassan-web</span>
               </div>
             </a>
             <div className="contact-item">
