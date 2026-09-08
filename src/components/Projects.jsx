@@ -35,7 +35,7 @@ const projects = [
       'Scheduling for live classes and 1-on-1 specialist bookings',
       'Session demos and success-story sections to build member confidence',
     ],
-    tags: ['React', 'Node.js', 'MongoDB'],
+    tags: ['React', 'Node.js', 'Express', 'MongoDB'],
   },
 ];
 

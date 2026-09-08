@@ -30,6 +30,11 @@ export default function About() {
             platform — handling everything from database design to frontend UI to
             deployment. I enjoy turning real business requirements into
             clean, working products.
+            <br />
+            <br />
+            I'm currently expanding into Python, learning Django and Django
+            REST Framework to round out my backend skill set alongside
+            Node.js and PHP.
           </p>
 
           <div className="grid grid-cols-2 gap-4">

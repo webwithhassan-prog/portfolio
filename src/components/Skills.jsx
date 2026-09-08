@@ -22,6 +22,11 @@ const skillGroups = [
     title: 'Tools & Workflow',
     skills: ['Git & GitHub', 'VS Code', 'Postman', 'Vite'],
   },
+  {
+    title: 'Currently Learning',
+    skills: ['Python', 'Django', 'Django REST Framework'],
+    learning: true,
+  },
 ];
 
 export default function Skills() {
@@ -41,14 +46,23 @@ export default function Skills() {
           {skillGroups.map((group, i) => (
             <Reveal key={group.title} delay={i * 80}>
               <div className={`${card} p-6 hover:-translate-y-1`}>
-                <h3 className="mb-4 font-sans text-base font-semibold text-text-h">
+                <h3 className="mb-4 flex items-center gap-2 font-sans text-base font-semibold text-text-h">
                   {group.title}
+                  {group.learning && (
+                    <span className="rounded-full border border-accent/40 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-accent">
+                      In progress
+                    </span>
+                  )}
                 </h3>
                 <ul className="flex flex-wrap gap-2">
                   {group.skills.map((s) => (
                     <li
                       key={s}
-                      className="rounded-full bg-accent-soft px-3 py-1.5 text-[13px] font-medium text-accent"
+                      className={
+                        group.learning
+                          ? 'rounded-full border border-dashed border-accent/50 px-3 py-1.5 text-[13px] font-medium text-accent'
+                          : 'rounded-full bg-accent-soft px-3 py-1.5 text-[13px] font-medium text-accent'
+                      }
                     >
                       {s}
                     </li>
