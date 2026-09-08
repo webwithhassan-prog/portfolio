@@ -1,0 +1,21 @@
+# Hassan Ansari — Full Stack Developer Portfolio
+
+> Portfolio site for Hassan Ansari, a full stack developer based in Lahore, Pakistan, currently completing a BSCS degree. Builds production web applications using the MERN stack (MongoDB, Express, React, Node.js) and PHP.
+
+## Pages
+
+- [Home](https://hassanarslan.dev/): Hero, about, skills, projects, and contact — a single-page portfolio.
+
+## Projects
+
+- [RG Tour & Travels](https://rgtravels.pk): A Hajj & Umrah travel agency site — package comparison across maktabs and tiers, testimonials, blog, and certifications. Built end to end (React, Node.js, Express, MongoDB).
+- [Fitness Zone](https://fitnesszone.ltd): A women's wellness membership platform — diet plans, live workout sessions, and 1-on-1 specialist consultations behind a member dashboard. Built end to end (React, Node.js, MongoDB).
+
+## Skills
+
+React.js, JavaScript (ES6+), Node.js, Express.js, PHP, MongoDB, MySQL, C++, HTML5, CSS3, Git.
+
+## Contact
+
+- Email: webwithhassan@gmail.com
+- LinkedIn: https://www.linkedin.com/in/hassan-web-505220435/

@@ -1,5 +1,5 @@
 export const btnPrimary =
-  'inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-md bg-accent px-6 py-3 text-[15px] font-semibold text-white transition duration-150 hover:-translate-y-0.5 hover:bg-accent-hover';
+  'inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-md bg-accent-hover px-6 py-3 text-[15px] font-semibold text-white transition duration-150 hover:-translate-y-0.5 hover:bg-accent-strong';
 
 export const btnOutline =
   'inline-flex shrink-0 items-center gap-2 whitespace-nowrap rounded-md border border-border px-6 py-3 text-[15px] font-semibold text-text-h transition duration-150 hover:-translate-y-0.5 hover:border-accent hover:text-accent';

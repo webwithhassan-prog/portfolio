@@ -59,6 +59,8 @@ export default function Projects() {
                 <img
                   src={p.image}
                   alt={`Screenshot of the ${p.name} homepage`}
+                  width={1200}
+                  height={844}
                   className="h-auto w-full border-b border-border object-cover object-top"
                   loading="lazy"
                 />
