@@ -24,9 +24,9 @@ export default function About() {
             <br />
             <br />
             I've independently built and shipped two production websites —{' '}
-            <strong className="text-text-h">rgtravels.pk</strong>, a travel booking platform, and{' '}
-            <strong className="text-text-h">fitnesszone.ltd</strong>, a fitness &amp; gym website —
-            handling everything from database design to frontend UI to
+            <strong className="text-text-h">rgtravels.pk</strong>, a Hajj &amp; Umrah travel agency site, and{' '}
+            <strong className="text-text-h">fitnesszone.ltd</strong>, a women's wellness membership
+            platform — handling everything from database design to frontend UI to
             deployment. I enjoy turning real business requirements into
             clean, working products.
           </p>
