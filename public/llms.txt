@@ -18,4 +18,4 @@ React.js, JavaScript (ES6+), Node.js, Express.js, PHP, MongoDB, MySQL, C++, HTML
 ## Contact
 
 - Email: webwithhassan@gmail.com
-- LinkedIn: https://www.linkedin.com/in/hassan-web-505220435/
+- LinkedIn: https://www.linkedin.com/in/hassan-arslan-505220435/

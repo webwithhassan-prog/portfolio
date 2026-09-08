@@ -43,7 +43,7 @@ export default function Hero() {
 
         <div className="flex gap-5">
           <a
-            href="https://www.linkedin.com/in/hassan-web-505220435/"
+            href="https://www.linkedin.com/in/hassan-arslan-505220435/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"

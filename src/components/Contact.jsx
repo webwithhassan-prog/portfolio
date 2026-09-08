@@ -50,14 +50,14 @@ export default function Contact() {
             </a>
             <a
               className="flex items-center gap-3.5 rounded-[10px] border border-border bg-surface p-4 transition-colors hover:border-accent"
-              href="https://www.linkedin.com/in/hassan-web-505220435/"
+              href="https://www.linkedin.com/in/hassan-arslan-505220435/"
               target="_blank"
               rel="noopener noreferrer"
             >
               <LinkedinIcon className="shrink-0 text-accent" />
               <div className="flex min-w-0 flex-col gap-0.5">
                 <span className="text-xs text-text-dim">LinkedIn</span>
-                <span className="truncate text-sm font-semibold text-text-h">linkedin.com/in/hassan-web</span>
+                <span className="truncate text-sm font-semibold text-text-h">linkedin.com/in/hassan-arslan</span>
               </div>
             </a>
             <div className="flex items-center gap-3.5 rounded-[10px] border border-border bg-surface p-4">
