@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { MailIcon, LinkedinIcon, MapPinIcon } from './icons';
 import { eyebrow, sectionHeading, sectionSub, btnPrimary } from './classNames';
+import Reveal from './Reveal';
 
 const CONTACT_EMAIL = 'webwithhassan@gmail.com';
 
@@ -26,14 +27,16 @@ export default function Contact() {
   return (
     <section id="contact" className="py-24 sm:py-28">
       <div className="container-narrow max-w-[920px]">
-        <p className={eyebrow}>Contact</p>
-        <h2 className={sectionHeading}>Let's build something together</h2>
-        <p className={sectionSub}>
-          I'm open to freelance projects, internships and full stack roles.
-          Feel free to reach out — I usually reply within a day.
-        </p>
+        <Reveal as="div">
+          <p className={eyebrow}>Contact</p>
+          <h2 className={sectionHeading}>Let's build something together</h2>
+          <p className={sectionSub}>
+            I'm open to freelance projects, internships and full stack roles.
+            Feel free to reach out — I usually reply within a day.
+          </p>
+        </Reveal>
 
-        <div className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.2fr]">
+        <Reveal as="div" delay={100} className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.2fr]">
           <div className="grid grid-cols-1 gap-4">
             <a
               className="flex items-center gap-3.5 rounded-[10px] border border-border bg-surface p-4 transition-colors hover:border-accent"
@@ -116,7 +119,7 @@ export default function Contact() {
               Send Message
             </button>
           </form>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

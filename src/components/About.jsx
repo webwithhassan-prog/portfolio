@@ -1,4 +1,5 @@
 import { eyebrow, sectionHeading } from './classNames';
+import Reveal from './Reveal';
 
 const facts = [
   { label: 'Based in', value: 'Lahore, Pakistan' },
@@ -10,7 +11,7 @@ const facts = [
 export default function About() {
   return (
     <section id="about" className="py-24 sm:py-28">
-      <div className="container-narrow">
+      <Reveal as="div" className="container-narrow">
         <p className={eyebrow}>About Me</p>
         <h2 className={sectionHeading}>A bit about my journey</h2>
 
@@ -43,7 +44,7 @@ export default function About() {
             ))}
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

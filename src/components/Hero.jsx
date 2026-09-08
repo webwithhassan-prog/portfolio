@@ -1,5 +1,6 @@
 import { LinkedinIcon, MailIcon, ArrowRightIcon, DownloadIcon } from './icons';
 import { btnPrimary, btnOutline, eyebrow } from './classNames';
+import Reveal from './Reveal';
 
 export default function Hero() {
   return (
@@ -9,7 +10,7 @@ export default function Hero() {
         style={{ background: 'radial-gradient(circle, rgb(85 120 201 / 0.22) 0%, rgb(85 120 201 / 0) 70%)' }}
       />
 
-      <div className="container-narrow max-w-[780px]">
+      <Reveal as="div" className="container-narrow max-w-[780px]">
         <p className={eyebrow}>Available for freelance &amp; internships</p>
 
         <h1 className="mb-6 text-[38px] leading-[1.15] tracking-tight sm:text-[50px] lg:text-[62px]">
@@ -58,7 +59,7 @@ export default function Hero() {
             <MailIcon />
           </a>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 }

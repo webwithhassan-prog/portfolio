@@ -1,5 +1,6 @@
 import { ExternalLinkIcon } from './icons';
 import { eyebrow, sectionHeading, sectionSub, card } from './classNames';
+import Reveal from './Reveal';
 
 const projects = [
   {
@@ -42,16 +43,18 @@ export default function Projects() {
   return (
     <section id="projects" className="py-24 sm:py-28">
       <div className="container-narrow">
-        <p className={eyebrow}>Projects</p>
-        <h2 className={sectionHeading}>Things I've built</h2>
-        <p className={sectionSub}>
-          Live, production websites I designed and developed end to end —
-          from database to deployment.
-        </p>
+        <Reveal as="div">
+          <p className={eyebrow}>Projects</p>
+          <h2 className={sectionHeading}>Things I've built</h2>
+          <p className={sectionSub}>
+            Live, production websites I designed and developed end to end —
+            from database to deployment.
+          </p>
+        </Reveal>
 
         <div className="flex flex-col gap-8">
-          {projects.map((p) => (
-            <div key={p.name} className={`${card} overflow-hidden`}>
+          {projects.map((p, i) => (
+            <Reveal key={p.name} delay={i * 100} className={`${card} overflow-hidden`}>
               <a href={p.url} target="_blank" rel="noopener noreferrer" className="block">
                 <img
                   src={p.image}
@@ -104,7 +107,7 @@ export default function Projects() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>
