@@ -28,11 +28,11 @@ const projects = [
     tag: "Women's Wellness Platform",
     role: 'Solo developer — built end to end, from auth to deployment',
     summary:
-      'A membership platform for a UK-registered women\'s health company, replacing scattered WhatsApp groups with one dashboard. Members sign up and choose from three service types — self-paced diet plans, scheduled live workout classes, and bookable 1-on-1 consultations with specialists — all under one account.',
+      'A membership platform for a UK-registered women\'s health company, replacing scattered WhatsApp groups with one dashboard. Members sign up and choose from two service paths — self-paced diet plans and scheduled live workout classes, six days a week — all under one account.',
     features: [
       'Authentication and a member dashboard for a global, remote-first audience',
-      'Three distinct service paths (diet plans, live sessions, consultations) in one coherent flow',
-      'Scheduling for live classes and 1-on-1 specialist bookings',
+      'Two distinct service paths (diet plans, live sessions) combinable in one coherent flow',
+      'Scheduling for live classes led by certified trainers',
       'Session demos and success-story sections to build member confidence',
     ],
     tags: ['React', 'Node.js', 'Express', 'MongoDB'],
