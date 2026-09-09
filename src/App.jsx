@@ -5,10 +5,12 @@ import Skills from './components/Skills';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import SmoothScroll from './components/SmoothScroll';
 
 function App() {
   return (
     <>
+      <SmoothScroll />
       <Navbar />
       <main>
         <Hero />

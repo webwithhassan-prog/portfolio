@@ -1,14 +1,26 @@
+import { lazy, Suspense } from 'react';
 import { LinkedinIcon, MailIcon, ArrowRightIcon, DownloadIcon } from './icons';
 import { btnPrimary, btnOutline, eyebrow } from './classNames';
 import Reveal from './Reveal';
+import useMediaQuery from '../hooks/useMediaQuery';
+
+const NetworkSphere = lazy(() => import('./NetworkSphere'));
 
 export default function Hero() {
+  const showSphere = useMediaQuery('(min-width: 1024px)');
+
   return (
     <section id="top" className="relative overflow-hidden pb-24 pt-28 sm:pb-28 sm:pt-32">
       <div
         className="pointer-events-none absolute left-1/2 top-[-220px] -z-10 h-[520px] w-[900px] -translate-x-1/2 rounded-full blur-3xl"
         style={{ background: 'radial-gradient(circle, rgb(85 120 201 / 0.22) 0%, rgb(85 120 201 / 0) 70%)' }}
       />
+
+      {showSphere && (
+        <Suspense fallback={null}>
+          <NetworkSphere className="pointer-events-none absolute right-[-120px] top-1/2 -z-10 h-[560px] w-[560px] -translate-y-1/2 xl:right-[-40px]" />
+        </Suspense>
+      )}
 
       <Reveal as="div" className="container-narrow max-w-[780px]">
         <p className={eyebrow}>Available for freelance &amp; internships</p>
