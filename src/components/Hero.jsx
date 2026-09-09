@@ -2,6 +2,7 @@ import { lazy, Suspense } from 'react';
 import { LinkedinIcon, MailIcon, ArrowRightIcon, DownloadIcon } from './icons';
 import { btnPrimary, btnOutline, eyebrow } from './classNames';
 import Reveal from './Reveal';
+import NetworkSphereLite from './NetworkSphereLite';
 import useMediaQuery from '../hooks/useMediaQuery';
 
 const NetworkSphere = lazy(() => import('./NetworkSphere'));
@@ -16,10 +17,12 @@ export default function Hero() {
         style={{ background: 'radial-gradient(circle, rgb(85 120 201 / 0.22) 0%, rgb(85 120 201 / 0) 70%)' }}
       />
 
-      {showSphere && (
+      {showSphere ? (
         <Suspense fallback={null}>
           <NetworkSphere className="pointer-events-none absolute right-[-120px] top-1/2 -z-10 h-[560px] w-[560px] -translate-y-1/2 xl:right-[-40px]" />
         </Suspense>
+      ) : (
+        <NetworkSphereLite className="pointer-events-none absolute -right-6 -top-4 -z-10 h-[230px] w-[290px] opacity-70" />
       )}
 
       <Reveal as="div" className="container-narrow max-w-[780px]">
