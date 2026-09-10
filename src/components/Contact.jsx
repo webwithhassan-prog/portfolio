@@ -6,7 +6,7 @@ import Reveal from './Reveal';
 const CONTACT_EMAIL = 'webwithhassan@gmail.com';
 // Web3Forms access keys are meant to be used client-side (like a Formspree
 // form ID) — safe to commit. Get one free, no signup, at https://web3forms.com
-const WEB3FORMS_ACCESS_KEY = '';
+const WEB3FORMS_ACCESS_KEY = '73bf3151-041b-4db5-bb90-e4c052dce051';
 
 const inputClass =
   'rounded-lg border border-border bg-bg-alt px-3.5 py-[11px] text-sm text-text-h placeholder:text-text-dim focus:border-accent focus:outline-none focus:ring-[3px] focus:ring-accent/35';
