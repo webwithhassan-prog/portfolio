@@ -26,14 +26,38 @@
     background: var(--bg);
     color: var(--text);
     font-family: 'Inter', system-ui, 'Segoe UI', Roboto, sans-serif;
+    overflow: hidden;
   }
   body {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 24px;
   }
+  .network {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: min(900px, 140vw);
+    height: min(900px, 140vw);
+    transform: translate(-50%, -50%);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .wordmark {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--text-h);
+    text-decoration: none;
+  }
+  .wordmark span { color: var(--accent); }
   .wrap {
+    position: relative;
     text-align: center;
     max-width: 480px;
   }
@@ -77,6 +101,34 @@
 </style>
 </head>
 <body>
+  <a class="wordmark" href="/">Hassan<span>.</span></a>
+
+  <svg class="network" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g stroke="#5578c9" stroke-opacity="0.4" stroke-width="1">
+      <line x1="80" y1="60" x2="200" y2="30" />
+      <line x1="200" y1="30" x2="320" y2="90" />
+      <line x1="80" y1="60" x2="150" y2="150" />
+      <line x1="200" y1="30" x2="150" y2="150" />
+      <line x1="150" y1="150" x2="260" y2="180" />
+      <line x1="320" y1="90" x2="260" y2="180" />
+      <line x1="150" y1="150" x2="100" y2="260" />
+      <line x1="260" y1="180" x2="340" y2="250" />
+      <line x1="260" y1="180" x2="200" y2="290" />
+      <line x1="100" y1="260" x2="200" y2="290" />
+      <line x1="340" y1="250" x2="200" y2="290" />
+    </g>
+    <g fill="#8fa8e8">
+      <circle cx="80" cy="60" r="4" />
+      <circle cx="200" cy="30" r="3" />
+      <circle cx="320" cy="90" r="5" />
+      <circle cx="150" cy="150" r="3.5" />
+      <circle cx="260" cy="180" r="4.5" />
+      <circle cx="100" cy="260" r="3" />
+      <circle cx="340" cy="250" r="4" />
+      <circle cx="200" cy="290" r="3.5" />
+    </g>
+  </svg>
+
   <div class="wrap">
     <p class="code">404</p>
     <h1>Page not found</h1>
