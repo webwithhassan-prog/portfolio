@@ -9,11 +9,11 @@
 ## Projects
 
 - [RG Tour & Travels](https://rgtravels.pk): A Hajj & Umrah travel agency site — package comparison across maktabs and tiers, testimonials, blog, and certifications. Built end to end (React, Node.js, Express, MongoDB).
-- [Fitness Zone](https://fitnesszone.ltd): A women's wellness membership platform — diet plans, live workout sessions, and 1-on-1 specialist consultations behind a member dashboard. Built end to end (React, Node.js, Express, MongoDB).
+- [Fitness Zone](https://fitnesszone.ltd): A women's wellness membership platform — diet plans and live workout sessions behind a member dashboard, with Stripe-powered checkout and subscription billing. Built end to end (React, Node.js, Express, MongoDB, Stripe).
 
 ## Skills
 
-React.js, JavaScript (ES6+), Node.js, Express.js, PHP, MongoDB, MySQL, C++, HTML5, CSS3, Git. Currently learning: Python, Django, Django REST Framework.
+React.js, JavaScript (ES6+), Node.js, Express.js, PHP, MongoDB, MySQL, Stripe API, C++, HTML5, CSS3, Git. Currently learning: Python, Django, Django REST Framework.
 
 ## Contact
 
