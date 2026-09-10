@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { btnPrimary } from './classNames';
+import useActiveSection from '../hooks/useActiveSection';
 
 const links = [
   { href: '#about', label: 'About' },
@@ -8,9 +9,12 @@ const links = [
   { href: '#contact', label: 'Contact' },
 ];
 
+const sectionIds = links.map((link) => link.href.slice(1));
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const activeId = useActiveSection(sectionIds);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 12);
@@ -34,7 +38,10 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-text-dim transition-colors hover:text-text-h"
+              aria-current={activeId === link.href.slice(1) ? 'true' : undefined}
+              className={`text-sm font-medium transition-colors hover:text-text-h ${
+                activeId === link.href.slice(1) ? 'text-accent' : 'text-text-dim'
+              }`}
             >
               {link.label}
             </a>
@@ -65,7 +72,10 @@ export default function Navbar() {
               key={link.href}
               href={link.href}
               onClick={() => setOpen(false)}
-              className="border-b border-border py-3 text-[15px] text-text"
+              aria-current={activeId === link.href.slice(1) ? 'true' : undefined}
+              className={`border-b border-border py-3 text-[15px] ${
+                activeId === link.href.slice(1) ? 'font-semibold text-accent' : 'text-text'
+              }`}
             >
               {link.label}
             </a>

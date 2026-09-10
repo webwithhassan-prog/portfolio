@@ -61,3 +61,19 @@ export function MapPinIcon({ className = '', ...props }) {
     </svg>
   );
 }
+
+export function CopyIcon({ className = '', ...props }) {
+  return (
+    <svg className={`h-[18px] w-[18px] shrink-0 fill-current ${className}`} viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path d="M8 3h9a2 2 0 0 1 2 2v11h-2V5H8V3ZM5 7h9a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V9a2 2 0 0 1 2-2Zm0 2v11h9V9H5Z" />
+    </svg>
+  );
+}
+
+export function CheckIcon({ className = '', ...props }) {
+  return (
+    <svg className={`h-[18px] w-[18px] shrink-0 fill-current ${className}`} viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path d="M9.55 17.6 4.4 12.45l1.42-1.42 3.73 3.73 8.63-8.63 1.42 1.42L9.55 17.6Z" />
+    </svg>
+  );
+}

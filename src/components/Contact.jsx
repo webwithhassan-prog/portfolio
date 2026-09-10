@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { MailIcon, LinkedinIcon, MapPinIcon } from './icons';
+import { MailIcon, LinkedinIcon, MapPinIcon, CopyIcon, CheckIcon } from './icons';
 import { eyebrow, sectionHeading, sectionSub, btnPrimary } from './classNames';
 import Reveal from './Reveal';
 
@@ -14,9 +14,20 @@ const inputClass =
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [status, setStatus] = useState('idle'); // idle | submitting | success | error
+  const [copied, setCopied] = useState(false);
 
   const handleChange = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
+  };
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(CONTACT_EMAIL);
+      setCopied(true);
+      window.setTimeout(() => setCopied(false), 1500);
+    } catch {
+      // Clipboard API unavailable — the mailto link still works as a fallback.
+    }
   };
 
   const handleSubmit = async (e) => {
@@ -73,16 +84,21 @@ export default function Contact() {
 
         <Reveal as="div" delay={100} className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.2fr]">
           <div className="grid grid-cols-1 gap-4">
-            <a
-              className="flex items-center gap-3.5 rounded-[10px] border border-border bg-surface p-4 transition-colors hover:border-accent"
-              href={`mailto:${CONTACT_EMAIL}`}
-            >
+            <div className="flex items-center gap-3.5 rounded-[10px] border border-border bg-surface p-4 transition-colors hover:border-accent">
               <MailIcon className="shrink-0 text-accent" />
-              <div className="flex min-w-0 flex-col gap-0.5">
+              <a href={`mailto:${CONTACT_EMAIL}`} className="flex min-w-0 flex-1 flex-col gap-0.5">
                 <span className="text-xs text-text-dim">Email</span>
                 <span className="truncate text-sm font-semibold text-text-h">{CONTACT_EMAIL}</span>
-              </div>
-            </a>
+              </a>
+              <button
+                type="button"
+                onClick={handleCopyEmail}
+                aria-label="Copy email address"
+                className="shrink-0 rounded-md p-1.5 text-text-dim transition-colors hover:bg-accent-soft hover:text-accent"
+              >
+                {copied ? <CheckIcon className="text-accent" /> : <CopyIcon />}
+              </button>
+            </div>
             <a
               className="flex items-center gap-3.5 rounded-[10px] border border-border bg-surface p-4 transition-colors hover:border-accent"
               href="https://www.linkedin.com/in/hassan-arslan-505220435/"
