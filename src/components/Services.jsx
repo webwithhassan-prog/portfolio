@@ -43,8 +43,8 @@ export default function Services() {
 
         <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
           {services.map((s, i) => (
-            <Reveal key={s.title} delay={i * 80}>
-              <div className={`${card} flex gap-4 p-6`}>
+            <Reveal key={s.title} delay={i * 80} className="h-full">
+              <div className={`${card} flex h-full gap-4 p-6`}>
                 <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-accent-soft text-accent">
                   <s.icon className="h-5 w-5" />
                 </div>
