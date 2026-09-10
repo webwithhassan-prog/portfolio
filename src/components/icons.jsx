@@ -77,3 +77,40 @@ export function CheckIcon({ className = '', ...props }) {
     </svg>
   );
 }
+
+export function CodeIcon({ className = '', ...props }) {
+  return (
+    <svg className={`h-[18px] w-[18px] shrink-0 fill-current ${className}`} viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <path d="M8.5 17 3 12l5.5-5 1.4 1.4L5.8 12l4.1 3.6L8.5 17Zm7 0-1.4-1.4L18.2 12l-4.1-3.6L15.5 7l5.5 5-5.5 5Z" />
+    </svg>
+  );
+}
+
+export function PlugIcon({ className = '', ...props }) {
+  return (
+    <svg className={`h-[18px] w-[18px] shrink-0 fill-current ${className}`} viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <rect x="9" y="2" width="2" height="6" rx="1" />
+      <rect x="13" y="2" width="2" height="6" rx="1" />
+      <path d="M6 8h12v4a6 6 0 0 1 -12 0V8Z" />
+      <rect x="11" y="18" width="2" height="4" rx="1" />
+    </svg>
+  );
+}
+
+export function BriefcaseIcon({ className = '', ...props }) {
+  return (
+    <svg className={`h-[18px] w-[18px] shrink-0 fill-current ${className}`} viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <rect x="3" y="8" width="18" height="12" rx="2" />
+      <rect x="8" y="5" width="8" height="4" rx="1" />
+    </svg>
+  );
+}
+
+export function SupportIcon({ className = '', ...props }) {
+  return (
+    <svg className={`h-[18px] w-[18px] shrink-0 fill-current ${className}`} viewBox="0 0 24 24" aria-hidden="true" {...props}>
+      <circle cx="12" cy="12" r="10" opacity="0.15" />
+      <path d="M9.55 17.6 4.4 12.45l1.42-1.42 3.73 3.73 8.63-8.63 1.42 1.42L9.55 17.6Z" />
+    </svg>
+  );
+}
