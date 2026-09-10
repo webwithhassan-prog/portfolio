@@ -10,7 +10,7 @@ const facts = [
 
 export default function About() {
   return (
-    <section id="about" className="py-24 sm:py-28">
+    <section id="about" tabIndex={-1} className="py-24 outline-none sm:py-28">
       <Reveal as="div" className="container-narrow">
         <p className={eyebrow}>About Me</p>
         <h2 className={sectionHeading}>A bit about my journey</h2>

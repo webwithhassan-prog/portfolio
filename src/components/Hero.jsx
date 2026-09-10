@@ -11,7 +11,7 @@ export default function Hero() {
   const showSphere = useMediaQuery('(min-width: 1024px)');
 
   return (
-    <section id="top" className="relative overflow-hidden pb-24 pt-28 sm:pb-28 sm:pt-32">
+    <section id="top" tabIndex={-1} className="relative overflow-hidden pb-24 pt-28 outline-none sm:pb-28 sm:pt-32">
       <div
         className="pointer-events-none absolute left-1/2 top-[-220px] -z-10 h-[520px] w-[900px] -translate-x-1/2 rounded-full blur-3xl"
         style={{ background: 'radial-gradient(circle, rgb(85 120 201 / 0.22) 0%, rgb(85 120 201 / 0) 70%)' }}

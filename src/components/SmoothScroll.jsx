@@ -32,7 +32,10 @@ export default function SmoothScroll() {
       const target = document.querySelector(id);
       if (!target) return;
       e.preventDefault();
-      lenis.scrollTo(target, { offset: -8 });
+      lenis.scrollTo(target, {
+        offset: -8,
+        onComplete: () => target.focus({ preventScroll: true }),
+      });
     };
     document.addEventListener('click', handleAnchorClick);
 

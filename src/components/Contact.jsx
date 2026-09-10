@@ -71,7 +71,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 sm:py-28">
+    <section id="contact" tabIndex={-1} className="py-24 outline-none sm:py-28">
       <div className="container-narrow max-w-[920px]">
         <Reveal as="div">
           <p className={eyebrow}>Contact</p>

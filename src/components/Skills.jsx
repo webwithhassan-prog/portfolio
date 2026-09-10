@@ -31,7 +31,7 @@ const skillGroups = [
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 sm:py-28">
+    <section id="skills" tabIndex={-1} className="py-24 outline-none sm:py-28">
       <div className="container-narrow">
         <Reveal as="div">
           <p className={eyebrow}>Skills</p>
