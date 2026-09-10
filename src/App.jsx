@@ -6,10 +6,12 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SmoothScroll from './components/SmoothScroll';
+import Preloader from './components/Preloader';
 
 function App() {
   return (
     <>
+      <Preloader />
       <SmoothScroll />
       <Navbar />
       <main>
