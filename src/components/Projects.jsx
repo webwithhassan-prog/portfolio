@@ -33,10 +33,11 @@ const projects = [
       'Authentication and a member dashboard for a global, remote-first audience',
       'Two distinct service paths (diet plans, live sessions) combinable in one coherent flow',
       'Scheduling for live classes led by certified trainers',
+      'Zoom API integration for hosting and joining live workout sessions',
       'Stripe-powered package checkout and subscription billing',
       'Session demos and success-story sections to build member confidence',
     ],
-    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe'],
+    tags: ['React', 'Node.js', 'Express', 'MongoDB', 'Stripe', 'Zoom API'],
   },
 ];
 
