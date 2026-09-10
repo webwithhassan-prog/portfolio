@@ -19,7 +19,7 @@ export default function Hero() {
 
       {showSphere ? (
         <Suspense fallback={null}>
-          <NetworkSphere className="pointer-events-none absolute right-[-120px] top-1/2 -z-10 h-[560px] w-[560px] -translate-y-1/2 xl:right-[-40px]" />
+          <NetworkSphere className="pointer-events-none absolute right-6 top-1/2 -z-10 h-[480px] w-[480px] -translate-y-1/2 xl:right-10 xl:h-[540px] xl:w-[540px]" />
         </Suspense>
       ) : (
         <NetworkSphereLite className="pointer-events-none absolute -right-6 -top-4 -z-10 h-[230px] w-[290px] opacity-70" />

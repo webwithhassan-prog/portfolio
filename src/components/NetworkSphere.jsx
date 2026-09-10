@@ -51,7 +51,7 @@ function Network() {
   });
 
   return (
-    <group ref={groupRef} scale={2}>
+    <group ref={groupRef} scale={1.3}>
       <lineSegments>
         <bufferGeometry>
           <bufferAttribute
@@ -77,7 +77,7 @@ export default function NetworkSphere({ className = '' }) {
   return (
     <div className={className} aria-hidden="true">
       <Canvas
-        camera={{ position: [0, 0, 4.6], fov: 38 }}
+        camera={{ position: [0, 0, 5.4], fov: 38 }}
         dpr={[1, 1.5]}
         gl={{ antialias: true, alpha: true }}
       >
