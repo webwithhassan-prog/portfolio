@@ -4,24 +4,59 @@ import { eyebrow, sectionHeading, sectionSub, btnPrimary } from './classNames';
 import Reveal from './Reveal';
 
 const CONTACT_EMAIL = 'webwithhassan@gmail.com';
+// Web3Forms access keys are meant to be used client-side (like a Formspree
+// form ID) — safe to commit. Get one free, no signup, at https://web3forms.com
+const WEB3FORMS_ACCESS_KEY = '';
 
 const inputClass =
   'rounded-lg border border-border bg-bg-alt px-3.5 py-[11px] text-sm text-text-h placeholder:text-text-dim focus:border-accent focus:outline-none focus:ring-[3px] focus:ring-accent/35';
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' });
+  const [status, setStatus] = useState('idle'); // idle | submitting | success | error
 
   const handleChange = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    const subject = `Portfolio inquiry from ${form.name}`;
-    const body = `${form.message}\n\n— ${form.name} (${form.email})`;
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+
+    if (!WEB3FORMS_ACCESS_KEY) {
+      const subject = `Portfolio inquiry from ${form.name}`;
+      const body = `${form.message}\n\n— ${form.name} (${form.email})`;
+      window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`;
+      return;
+    }
+
+    setStatus('submitting');
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Portfolio inquiry from ${form.name}`,
+          from_name: form.name,
+          name: form.name,
+          email: form.email,
+          message: form.message,
+        }),
+      });
+      const data = await res.json();
+
+      if (data.success) {
+        setStatus('success');
+        setForm({ name: '', email: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -115,8 +150,28 @@ export default function Contact() {
                 className={`${inputClass} resize-y`}
               />
             </div>
-            <button type="submit" className={`${btnPrimary} w-full justify-center border-none`}>
-              Send Message
+
+            {status === 'success' && (
+              <p className="rounded-lg border border-accent/40 bg-accent-soft px-3.5 py-3 text-sm text-text-h">
+                Thanks — your message is in! I'll reply within a day.
+              </p>
+            )}
+            {status === 'error' && (
+              <p className="rounded-lg border border-border bg-bg-alt px-3.5 py-3 text-sm text-text-dim">
+                Something went wrong sending that. Please email me directly at{' '}
+                <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-accent hover:underline">
+                  {CONTACT_EMAIL}
+                </a>
+                .
+              </p>
+            )}
+
+            <button
+              type="submit"
+              disabled={status === 'submitting'}
+              className={`${btnPrimary} w-full justify-center border-none disabled:cursor-not-allowed disabled:opacity-60`}
+            >
+              {status === 'submitting' ? 'Sending...' : 'Send Message'}
             </button>
           </form>
         </Reveal>
